@@ -4,10 +4,13 @@ The Eloquent Sluggable package is a simple, easy-to-use solution for automatical
 Installation
 Install the package via Composer:
 
-composer require cviebrock/eloquent-sluggable
+     composer require cviebrock/eloquent-sluggable
+
 Publish the configuration file:
 
-php artisan vendor:publish --provider="Cviebrock\EloquentSluggable\ServiceProvider"
+     php artisan vendor:publish --provider="Cviebrock\EloquentSluggable\ServiceProvider"
+
+
 This will create a config/sluggable.php file where you can configure the slug generation options.
 
 Usage
