@@ -47,8 +47,9 @@ source: Column used to generate the slug.
 maxLength: The maximum length for generated slugs.
 slugSeparator: The separator used in the slug.
 unique: Whether the slugs should be unique.
-Example configuration in config/sluggable.php:
+To add support for different languages in the config/sluggable.php configuration file for generating slugs, you can modify the method used for slug generation by including language-specific transliterations or rules for generating slugs in various languages.
 
+Here is an example configuration for supporting multiple languages, including Arabic, English, and other languages:
 <?php
 
 return [
