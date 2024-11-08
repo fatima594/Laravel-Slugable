@@ -27,15 +27,33 @@ class Post extends Model
      *
      * @return array
      */
+ <?php
+
+namespace App\Models;
+
+use Cviebrock\EloquentSluggable\Sluggable;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Post extends Model
+{
+    use HasFactory, Sluggable;
+
+    /**
+     * Get the sluggable configuration array for the model.
+     *
+     * @return array
+     */
     public function sluggable(): array
     {
         return [
             'slug' => [
-                'source' => 'title'
+                'source' => 'title'  // يقوم بتوليد الـ slug بناءً على حقل title
             ]
         ];
     }
 }
+
 In this example, the slug field will be generated from the title field of the model.
 
 You can customize the slug generation by modifying the sluggable() method in your model:
